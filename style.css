@@ -30,12 +30,16 @@ p {
   gap: 20px;
 }
 
+.title {
+  font-size: 25px;
+}
+
 .button {
-  background-color: #4CAF50;
+  background-color: #6bc6ff;
   color: white;
   padding: 15px 30px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
