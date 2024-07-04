@@ -31,7 +31,8 @@ p {
 }
 
 .title {
-  font-size: 25px;
+  margin-top: -30px;
+  font-size: 30px;
 }
 
 .button {
