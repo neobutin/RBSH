@@ -40,26 +40,12 @@ select {
   border-radius: 30px;
 
   font: inherit;
+  text-align: center;
   letter-spacing: inherit;
-  word-spacing: inherit;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
 
   outline: 0.15em solid #e6e6e6;
   box-shadow: 0 0 4px #787878;
-}
-
-select:not([multiple]) {
-  padding-right: 1.2em;
-  background-repeat: no-repeat;
-  background: url("arrow.png") no-repeat right #fff;
-  background-position: calc(100% - 5px) 3px;
-  background-size: 30px;
-}
-
-select::-ms-expand {
-  display: none;
 }
 
 button {

@@ -163,6 +163,8 @@ infoButton.addEventListener("click", () => {
     showInfo();
 });
 
+
+
 closeResultButton.addEventListener("click", () => {
     resultWindow.style.transition = "opacity 0.3s ease-in-out";
     resultWindow.style.opacity = "1";
