@@ -3,8 +3,8 @@ const mapSelect = document.getElementById("map");
 const modifierSelect = document.getElementById("modifier");
 const generateButton = document.getElementById("generateButton");
 const resultParagraph = document.getElementById("result");
-const aboutButton = document.getElementById("aboutButton");
-const donateButton = document.getElementById("donateButton");
+const infoButton = document.getElementById("infoButton");
+const supportButton = document.getElementById("supportButton");
 const resultWindow = document.getElementById("resultWindow");
 const closeResultButton = document.getElementById("closeResultButton");
 const page = document.body;
@@ -158,9 +158,11 @@ const bestBrawlers = {
 gameModeSelect.addEventListener("change", updateMapOptions);
 modifierSelect.addEventListener("change", updateGenerateButton);
 generateButton.addEventListener("click", generateFighters);
-aboutButton.addEventListener("click", () => {
-    showAbout();
+
+infoButton.addEventListener("click", () => {
+    showInfo();
 });
+
 closeResultButton.addEventListener("click", () => {
     resultWindow.style.transition = "opacity 0.3s ease-in-out";
     resultWindow.style.opacity = "1";
@@ -172,7 +174,10 @@ closeResultButton.addEventListener("click", () => {
     }, 310);
 });
 
-donateButton.addEventListener("click", showDonate);
+supportButton.addEventListener("click", () => {
+    showSupport();
+});
+
 closeResultButton.addEventListener("click", () => {
     resultWindow.style.transition = "opacity 0.3s ease-in-out";
     resultWindow.style.opacity = "1";
@@ -230,20 +235,21 @@ function generateFighters() {
     }, 10);
 }
 
-function showAbout() {
+function showInfo() {
     resultParagraph.innerHTML = "";
 
-    const aboutHeading = document.createElement("h2");
-    aboutHeading.style.fontSize = "2em";
-    aboutHeading.textContent = "About";
-    resultParagraph.appendChild(aboutHeading);
+    const infoHeading = document.createElement("h2");
+    infoHeading.style.fontSize = "2em";
+    infoHeading.innerHTML = "Info<br>";
+    resultParagraph.appendChild(infoHeading);
 
     const rbshInfo = document.createElement("p");
-    rbshInfo.innerHTML = "RBSH Ver: #0003 (Recoded)<br>Last update 05.07.24<br><br>";
+    rbshInfo.innerHTML = "RBSH Ver: #0004<br>Last update 05.07.24<br><br>";
     resultParagraph.appendChild(rbshInfo);
 
     const seasonInfo = document.createElement("p");
-    seasonInfo.innerHTML = `Current ranked season: "Gods VS Monsters!" (28th)<br><br>Future 29th ranked season: ???<br><br>`;
+    seasonInfo.innerHTML = `Current ranked season: "Gods VS Monsters!" (28th)<br>`
+    seasonInfo.innerHTML += `Future 29th ranked season: ???<br><br>`;
     resultParagraph.appendChild(seasonInfo);
 
     const targetDate = new Date("2024-07-31");
@@ -271,10 +277,10 @@ function showAbout() {
     }, 10);
 }
 
-function showDonate() {
-    resultParagraph.innerHTML = `<h2 style="font-size: 2em;">Donate</h2>`;
+function showSupport() {
+    resultParagraph.innerHTML = `<h2 style="font-size: 2em;">Support Author</h2>`;
     resultParagraph.innerHTML += `If you want to support the author of this site, you can do it below<br><br>`
-    resultParagraph.innerHTML += `<a href="https://www.donationalerts.com/r/assequilent">Tap to donate</a>`
+    resultParagraph.innerHTML += `<a href="https://www.donationalerts.com/r/assequilent">Tap to support</a>`
     
     resultWindow.style.display = "block";
     resultWindow.style.transition = "opacity 0.3s ease-in-out";

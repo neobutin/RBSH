@@ -65,7 +65,7 @@ button:disabled {
   margin-bottom: 20px;
 }
 
-#aboutButton {
+#infoButton {
   background-color: #3498DB;
   box-shadow: 0 0 4px rgb(120, 120, 120, 0.6);
   border-radius: 15px;
@@ -75,7 +75,7 @@ button:disabled {
   }
 }
 
-#donateButton {
+#supportButton {
   background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
   text-align: center;
   transition: 0.5s;
