@@ -246,7 +246,7 @@ function showInfo() {
     resultParagraph.appendChild(infoHeading);
 
     const rbshInfo = document.createElement("p");
-    rbshInfo.innerHTML = "RBSH Ver: #0006<br>Last update 05.07.24<br><br>";
+    rbshInfo.innerHTML = "RBSH Ver: #0008<br>Last update 05.07.24<br><br>";
     resultParagraph.appendChild(rbshInfo);
 
     const seasonInfo = document.createElement("p");
