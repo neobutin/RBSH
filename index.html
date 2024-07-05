@@ -4,19 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranked Brawl Stars Helper</title>
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
     <div class="container">
+        
         <img src="icon.png" class="logo">
-        <p class="title">Ranked Brawl Stars Helper</p>
-        <p>Hi! You have arrived at the RBSH page. To download, just click on the 'Download' button, and to view the app, click on the 'Browse' button.</p>
-        <div class="buttons">
-            <a href="RBSH.jar" class="button" download>Download</a>
-            <a href="browse.html" class="button">Browse</a>
+        <h1>Ranked Brawl<br>Stars Helper</h1>
+        <p>Greetings!<br>If you don't know how to select<br>brawlers for ranked mathes,<br>this site is right for you!<br> <br> <br></p>
+        <div class="dropdown-group">
+            <label for="modes">Mode:</label>
+            <select id="modes">
+                <option value="GEM_GRAB">Gem Grab</option>
+                <option value="HEIST">Heist</option>
+                <option value="BOUNTY">Bounty</option>
+                <option value="BRAWL_BALL">Brawl Ball</option>
+                <option value="HOT_ZONE">Hot Zone</option>
+                <option value="KNOCKOUT">Knockout</option>
+            </select>
         </div>
+        <div class="dropdown-group">
+            <label for="map">Map:</label>
+            <select id="map" disabled>
+                <option value="">Pick map!</option>
+            </select>
+        </div>
+        <div class="dropdown-group">
+            <label for="modifier">Modifier:</label>
+            <select id="modifier">
+                <option value="">Pick modifier!</option>
+                <option value="CLASSIC">Classic</option>
+            </select>
+        </div>
+        <button id="generateButton" disabled>Get best brawlers</button>
+        <div id="resultWindow" class="result-window">
+            <p id="result"></p>
+            <button id="closeResultButton"></button>
+        </div>
+        <button id="aboutButton">About</button>
+        <button id="donateButton">Donate</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+<!--доделать кнопку About, сделать лого, сделать кнопку доната СДЕЛАТЬ анимацию-->
