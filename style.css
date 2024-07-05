@@ -18,7 +18,7 @@ body {
 .container {
   background-color: #fff;
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -41,7 +41,7 @@ select {
 
 button {
   background-color: #4CAF50;
-  box-shadow: 0 0 5px rgb(0, 0, 0, 0.6);
+  box-shadow: 0 0 4px rgb(120, 120, 120, 0.6);
   border-radius: 15px;
   &:hover {
     background-color: #147500; 
@@ -90,16 +90,18 @@ button:disabled {
   }
 }
 
-
 .result-window {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(0, 0, 0, 0.1);
   display: none;
   z-index: 100; 
   width: 300px; 

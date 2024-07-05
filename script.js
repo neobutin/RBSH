@@ -7,6 +7,7 @@ const aboutButton = document.getElementById("aboutButton");
 const donateButton = document.getElementById("donateButton");
 const resultWindow = document.getElementById("resultWindow");
 const closeResultButton = document.getElementById("closeResultButton");
+const page = document.body;
 
 const modes = {
     "HOT_ZONE": {
@@ -157,7 +158,9 @@ const bestBrawlers = {
 gameModeSelect.addEventListener("change", updateMapOptions);
 modifierSelect.addEventListener("change", updateGenerateButton);
 generateButton.addEventListener("click", generateFighters);
-aboutButton.addEventListener("click", showAbout);
+aboutButton.addEventListener("click", () => {
+    showAbout();
+});
 closeResultButton.addEventListener("click", () => {
     resultWindow.style.transition = "opacity 0.3s ease-in-out";
     resultWindow.style.opacity = "1";
@@ -228,10 +231,21 @@ function generateFighters() {
 }
 
 function showAbout() {
-    resultParagraph.innerHTML = `<h2 style="font-size: 2em;">About</h2>`;
-    resultParagraph.innerHTML += `RBSH Ver: #0002 (Recoded)<br><br>`
-    resultParagraph.innerHTML += `Current ranked season: "Gods VS Monsters!" (28th)<br>`
-    resultParagraph.innerHTML += `Future 29th ranked season: ???<br><br>`
+    resultParagraph.innerHTML = "";
+
+    const aboutHeading = document.createElement("h2");
+    aboutHeading.style.fontSize = "2em";
+    aboutHeading.textContent = "About";
+    resultParagraph.appendChild(aboutHeading);
+
+    const rbshInfo = document.createElement("p");
+    rbshInfo.innerHTML = "RBSH Ver: #0003 (Recoded)<br>Last update 05.07.24<br><br>";
+    resultParagraph.appendChild(rbshInfo);
+
+    const seasonInfo = document.createElement("p");
+    seasonInfo.innerHTML = `Current ranked season: "Gods VS Monsters!" (28th)<br><br>Future 29th ranked season: ???<br><br>`;
+    resultParagraph.appendChild(seasonInfo);
+
     const targetDate = new Date("2024-07-31");
     const now = new Date();
     const timeRemaining = targetDate - now;
@@ -239,13 +253,16 @@ function showAbout() {
     const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
+    const seasonEndInfo = document.createElement("p");
     if (hours === 0) {
-        resultParagraph.innerHTML += `28th Ranked season ends in: ${days}d`;
+        seasonEndInfo.textContent = `28th Ranked season ends in: ${days}d;`;
     } else if (days === 0) {
-        resultParagraph.innerHTML += `28th Ranked season is over!`;
+        seasonEndInfo.textContent = `28th Ranked season is over!`;
     } else {
-        resultParagraph.innerHTML += `28th Ranked season ends in: ${days}d ${hours}h`;
+        seasonEndInfo.textContent = `28th Ranked season ends in: ${days}d ${hours}h`;
     }
+    resultParagraph.appendChild(seasonEndInfo);
+
     resultWindow.style.display = "block";
     resultWindow.style.transition = "opacity 0.3s ease-in-out";
     resultWindow.style.opacity = "0";
